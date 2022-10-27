@@ -1,0 +1,16 @@
+mysqlIp: 192.168.4.187
+server:
+  port: 8080
+spring:
+  application:
+    name: adv
+  datasource:
+    url: jdbc:mysql://${mysqlIp}:3306/pangu_rm_test_c03?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=CONVERT_TO_NULL&useSSL=false
+    username: root
+    password: mysql
+    driver-class-name: com.mysql.jdbc.Driver
+mybatis:
+  mapper-locations: classpath:mapper/**.xml
+logging:
+  level:
+    com.lanbridge.advancequery.dao: debug
